@@ -1,0 +1,118 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 800px;
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.left-side {
+    width: 50%;
+    background: linear-gradient(to bottom, #1d73ff, #1253ba);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.left-side h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.left-side p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.left-side img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.right-side {
+    width: 50%;
+    padding: 40px;
+}
+
+.right-side h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #1d73ff;
+}
+
+.form-group .checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.form-group .checkbox input {
+    margin-right: 8px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: #1d73ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.btn-secondary {
+    background-color: #ddd;
+    color: #333;
+}
+
+.btn:hover {
+    background-color: #1253ba;
+}
+
+.btn-secondary:hover {
+    background-color: #ccc;
+}

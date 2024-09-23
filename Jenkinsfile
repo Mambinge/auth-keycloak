@@ -4,6 +4,11 @@ pipeline {
         nodejs "NODEJS" 
     }
     stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
         stage('Build') {
             steps {
                 bat 'npm install'
@@ -12,9 +17,9 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                bat 'jenkins\\scripts\\deliver.bat'
+                powershell 'jenkins\\scripts\\deliver.ps1'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                bat 'jenkins\\scripts\\kill.bat'
+                powershell 'jenkins\\scripts\\kill.ps1'
             }
         }
     }

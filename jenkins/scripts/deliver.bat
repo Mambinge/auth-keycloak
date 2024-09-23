@@ -1,9 +1,17 @@
-#!/usr/bin/env bat
+@echo off
+REM Navigate to the project directory if not already there
+cd /D %~dp0..
 
-npm run ng build
-npm run ng serve &
-sleep 1
-echo $! > .pidfile
+REM Install Angular CLI locally if not installed
+npm install @angular/cli
 
-echo 'Now...'
-echo 'Visit http://localhost:4200 to see your Node.js/Angular application in action.'
+REM Run the Angular build
+npx ng build --prod
+
+REM Check if the build was successful
+if %ERRORLEVEL% EQU 0 (
+    echo Angular build completed successfully.
+) else (
+    echo Angular build failed.
+    exit /B %ERRORLEVEL%
+)

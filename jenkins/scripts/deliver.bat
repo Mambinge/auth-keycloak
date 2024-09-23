@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bat
 
 npm run ng build
 npm run ng serve &
